@@ -1,7 +1,7 @@
 require 'date'
 
 class Item
-  attr_reader :id, :archived
+  attr_reader :id, :archived, :publish_date
 
   def initialize(publish_date, archived: false)
     @id = Random.rand(1...1000)
