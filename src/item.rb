@@ -9,8 +9,9 @@ class Item
     @archived = archived
   end
 
-  def author(author)
+  def add_author(author)
     @author = author
+    author.items.push(self) unless author.items.include?(self)
   end
 
   def genre(genre)
