@@ -6,7 +6,7 @@ class MusicAlbum < Item
   def initialize(item, on_spotify: false)
     super()
     @item = item
-    @on_spotify = on_spotify 
+    @on_spotify = on_spotify
   end
 
   def can_be_archived?
