@@ -14,7 +14,7 @@ describe Author do
     it 'Return the correct firstname' do
       expect(@author.first_name).to eql 'Stephen'
     end
-    
+
     it 'Return the correct lastname' do
       expect(@author.last_name).to eql 'King'
     end
