@@ -19,7 +19,9 @@ class Item
     @source = source
   end
 
-  def label(label)
+
+  def add_label(label)
     @label = label
+    label.items.push(self) unless label.items.include?(self)
   end
 end
