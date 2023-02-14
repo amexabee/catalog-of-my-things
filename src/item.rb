@@ -1,3 +1,5 @@
+require 'date'
+
 class Item
   attr_reader :id, :archived
 
@@ -22,5 +24,15 @@ class Item
   def add_label(label)
     @label = label
     label.items.push(self) unless label.items.include?(self)
+  end
+
+  def move_to_archive?
+    return @archived = true if can_be_archived?
+  end
+
+  private
+
+  def can_be_archived?
+    DateTime.now.year - DateTime.parse(@publish_date).year > 10
   end
 end
