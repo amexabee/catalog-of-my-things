@@ -30,7 +30,7 @@ class Item
 
   private
 
-  def can_be_archieved?
-    @publish_date > 10
+  def can_be_archived?
+    return DateTime.now.mjd - DateTime.parse(@publish_date).mjd > 10
   end
 end
