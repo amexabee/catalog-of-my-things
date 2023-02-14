@@ -12,6 +12,6 @@ class Genre < Item
 
   def add_item(item)
     @items.push(item)
-    item << self
+    item.add_genre(self)
   end
 end
