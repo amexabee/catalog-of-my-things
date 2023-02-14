@@ -23,4 +23,15 @@ class Item
     @label = label
     label.items.push(self) unless label.items.include?(self)
   end
+
+  def move_to_archive?
+    if can_be_achieved?
+      @archived = true
+  end
+
+  private
+
+  def can_be_archieved?
+    @publish_date > 10
+  end
 end
