@@ -1,6 +1,5 @@
 require_relative '../book'
-require_relative './input_cover'
-require_relative './input_publish_date'
+require_relative './inputs'
 
 def add_book
   print 'Publisher: '
