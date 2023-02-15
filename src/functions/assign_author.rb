@@ -1,9 +1,9 @@
-require_relative '../label'
+require_relative '../author'
 
 ITEMS_TYPE = %w[BOOK MUSIC GAME MOVIE].freeze
-def assign_label
+def assign_author
   loop do
-    puts 'Select the type of item that you want to add label:'
+    puts 'Select the type of item that you want to add author:'
     ITEMS_TYPE.each_with_index do |item, index|
       puts "#{index + 1}- #{item}"
     end
@@ -26,14 +26,14 @@ def show_books
     puts "#{index}) #{book.publisher} - #{book.publish_date} - #{book.cover_state}"
   end
   selected_index = gets.chomp.to_i
-  print 'Label title: '
-  title = gets.chomp
-  print 'Label color: '
-  color = gets.chomp
-  label = Label.new(title, color)
-  books[selected_index].add_label(label)
-  labels << label
-  puts 'Label assigned successfully'
+  print 'Author first name: '
+  first_name = gets.chomp
+  print 'Author second name: '
+  second_name = gets.chomp
+  author = Author.new(first_name, second_name)
+  books[selected_index].add_author(author)
+  authors << author
+  puts 'Author assigned successfully'
 end
 
 def show_games
@@ -46,12 +46,12 @@ def show_games
     puts "#{index}) #{game.multiplayer} - #{game.publish_date}"
   end
   selected_index = gets.chomp.to_i
-  print 'Label title: '
-  title = gets.chomp
-  print 'Label color: '
-  color = gets.chomp
-  label = Label.new(title, color)
-  games[selected_index].add_label(label)
-  labels << label
-  puts 'Label assigned successfully'
+  print 'Author first name: '
+  first_name = gets.chomp
+  print 'Author second name: '
+  second_name = gets.chomp
+  author = Author.new(first_name, second_name)
+  books[selected_index].add_author(author)
+  authors << author
+  puts 'Author assigned successfully'
 end
