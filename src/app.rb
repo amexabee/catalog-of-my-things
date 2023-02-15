@@ -1,6 +1,7 @@
 require_relative './functions/list_books'
 require_relative './functions/list_labels'
 require_relative './functions/add_book'
+require_relative './functions/assign_label'
 
 class App
   attr_reader :books, :authors, :games, :items, :labels
@@ -17,7 +18,8 @@ class App
     9 => :add_book,
     10 => :add_music,
     11 => :add_movie,
-    12 => :add_game
+    12 => :add_game,
+    13 => :assign_label
   }.freeze
 
   def initialize

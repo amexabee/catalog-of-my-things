@@ -6,7 +6,7 @@ def main
   loop do
     show_menu
     input = gets.chomp.to_i
-    if input == 13
+    if input.zero?
       puts "\nGood Bye."
       break
     end
@@ -28,6 +28,7 @@ def show_menu()
   10. Add a music album
   11. Add a movie
   12. Add a game
-  13. Exit"
+  13. Assign label
+  0. Exit"
 end
 main
