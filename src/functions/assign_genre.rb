@@ -12,13 +12,13 @@ def assign_genre
     item_type = gets.chomp.to_i
     break if item_type.zero?
 
-    show_books if item_type == 1
-    show_music if item_type == 2
-    show_games if item_type == 3
+    show_books_genre if item_type == 1
+    show_music_genre if item_type == 2
+    show_games_genre if item_type == 3
   end
 end
 
-def show_music
+def show_music_genre
   if music.empty?
     puts "No music in catalog\n\n"
     return
@@ -36,7 +36,7 @@ def show_music
   puts 'Genre assigned successfully'
 end
 
-def show_books
+def show_books_genre
   if books.empty?
     puts "No books in catalog\n\n"
     return
@@ -54,7 +54,7 @@ def show_books
   puts 'Genre assigned successfully'
 end
 
-def show_games
+def show_games_genre
   if games.empty?
     puts "No games in catalog\n\n"
     return

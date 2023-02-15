@@ -16,7 +16,7 @@ class App
 
   LIST_OPTIONS = {
     1 => :list_books,
-    2 => :list_music,
+    2 => :list_music_albums,
     3 => :list_movies,
     4 => :list_games,
     5 => :list_genres,
