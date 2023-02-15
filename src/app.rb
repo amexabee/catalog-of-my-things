@@ -29,7 +29,6 @@ class App
   end
 
   def options(option)
-    puts "You selected #{option}"
     send(LIST_OPTIONS[option])
   end
 end
