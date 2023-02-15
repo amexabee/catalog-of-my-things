@@ -1,12 +1,15 @@
 require_relative './functions/list_books'
+require_relative './functions/list_games'
 require_relative './functions/list_labels'
+require_relative './functions/list_authors'
 require_relative './functions/add_book'
+require_relative './functions/add_game'
 require_relative './functions/assign_label'
 require_relative './functions/add_genre'
 require_relative './functions/add_music_album'
 require_relative './functions/list_music_albums'
 require_relative './functions/list_genres.rb'
-
+require_relative './functions/assign_author'
 
 class App
   attr_reader :books, :authors, :games, :items, :labels, :genres, :music
@@ -24,7 +27,8 @@ class App
     10 => :add_music,
     11 => :add_movie,
     12 => :add_game,
-    13 => :assign_label
+    13 => :assign_label,
+    14 => :assign_author
   }.freeze
 
   def initialize

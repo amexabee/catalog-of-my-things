@@ -29,6 +29,7 @@ def show_menu()
   11. Add a movie
   12. Add a game
   13. Assign label
+  14. Assign author
   0. Exit"
 end
 main
