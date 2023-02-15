@@ -8,6 +8,7 @@ class Genre < Item
     @id = Random.rand(1...1000)
     @name = name
     @items = []
+    super
   end
 
   def add_item(item)
