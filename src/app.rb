@@ -5,7 +5,7 @@ require_relative './functions/assign_label'
 require_relative './functions/add_genre'
 require_relative './functions/add_music_album'
 require_relative './functions/list_music_albums'
-require_relative './functions/list_genres.rb'
+require_relative './functions/list_genres'
 
 
 class App

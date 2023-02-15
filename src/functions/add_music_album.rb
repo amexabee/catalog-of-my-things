@@ -2,8 +2,7 @@ require_relative 'input_publish_date'
 require_relative '../music_album'
 
 def validate_spotify(val)
-  str = val.downcase[0, 1]
-  return str == 'y'
+  val.downcase[0, 1] == 'y'
 end
 
 def add_music_album
