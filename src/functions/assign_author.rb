@@ -1,6 +1,5 @@
 require_relative '../author'
 
-ITEMS_TYPE = %w[BOOK MUSIC GAME MOVIE].freeze
 def assign_author
   loop do
     puts 'Select the type of item that you want to add author:'
