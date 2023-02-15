@@ -1,9 +1,10 @@
-require_relative '../label'
+require_relative '../genre'
+require_relative 'inputs'
 
 ITEMS_TYPE = %w[BOOK MUSIC GAME MOVIE].freeze
-def assign_label
+def assign_genre
   loop do
-    puts 'Select the type of item that you want to add label:'
+    puts 'Select the type of item that you want to add genre:'
     ITEMS_TYPE.each_with_index do |item, index|
       puts "#{index + 1}- #{item}"
     end
@@ -22,19 +23,17 @@ def show_music
     puts "No music in catalog\n\n"
     return
   end
-  puts 'Select the music to assign label by index number'
+  puts 'Select the music to assign genre by index number'
   music.each_with_index do |music, index|
     puts "#{index}) #{music.publish_date} - #{music.on_spotify}"
   end
   selected_index = gets.chomp.to_i
-  print 'Label title: '
-  title = gets.chomp
-  print 'Label color: '
-  color = gets.chomp
-  label = Label.new(title, color)
-  music[selected_index].add_label(label)
-  labels << label
-  puts 'Label assigned successfully'
+  print 'Genre name: '
+  input = gets.chomp
+  genre = Genre.new(input)
+  music[selected_index].add_genre(genre)
+  genres << genre
+  puts 'Genre assigned successfully'
 end
 
 def show_books
@@ -42,19 +41,17 @@ def show_books
     puts "No books in catalog\n\n"
     return
   end
-  puts 'Select the book to assign label by index number'
+  puts 'Select the book to assign genre by index number'
   books.each_with_index do |book, index|
     puts "#{index}) #{book.publisher} - #{book.publish_date} - #{book.cover_state}"
   end
   selected_index = gets.chomp.to_i
-  print 'Label title: '
-  title = gets.chomp
-  print 'Label color: '
-  color = gets.chomp
-  label = Label.new(title, color)
-  books[selected_index].add_label(label)
-  labels << label
-  puts 'Label assigned successfully'
+  print 'Genre name: '
+  input = gets.chomp
+  genre = Genre.new(input)
+  books[selected_index].add_genre(genre)
+  genres << genre
+  puts 'Genre assigned successfully'
 end
 
 def show_games
@@ -62,17 +59,15 @@ def show_games
     puts "No games in catalog\n\n"
     return
   end
-  puts 'Select the game to assign label by index number'
+  puts 'Select the game to assign genre by index number'
   games.each_with_index do |game, index|
     puts "#{index}) #{game.multiplayer} - #{game.publish_date}"
   end
   selected_index = gets.chomp.to_i
-  print 'Label title: '
-  title = gets.chomp
-  print 'Label color: '
-  color = gets.chomp
-  label = Label.new(title, color)
-  games[selected_index].add_label(label)
-  labels << label
-  puts 'Label assigned successfully'
+  print 'Genre name: '
+  input = gets.chomp
+  genre = Genre.new(input)
+  games[selected_index].add_genre(genre)
+  genres << genre
+  puts 'Genre assigned successfully'
 end

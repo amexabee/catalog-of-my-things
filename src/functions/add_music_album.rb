@@ -1,4 +1,4 @@
-require_relative 'input_publish_date'
+require_relative 'inputs'
 require_relative '../music_album'
 
 def validate_spotify(val)

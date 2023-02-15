@@ -30,6 +30,7 @@ def show_menu()
   12. Add a game
   13. Assign label
   14. Assign author
+  15. Assign Genre
   0. Exit"
 end
 main
