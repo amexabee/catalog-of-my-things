@@ -51,7 +51,7 @@ def show_games
   print 'Author second name: '
   second_name = gets.chomp
   author = Author.new(first_name, second_name)
-  books[selected_index].add_author(author)
+  games[selected_index].add_author(author)
   authors << author
   puts 'Author assigned successfully'
 end
