@@ -12,8 +12,29 @@ def assign_label
     break if item_type.zero?
 
     show_books if item_type == 1
+    show_music if item_type == 2
     show_games if item_type == 3
   end
+end
+
+def show_music
+  if music.empty?
+    puts "No music in catalog\n\n"
+    return
+  end
+  puts 'Select the music to assign label by index number'
+  music.each_with_index do |music, index|
+    puts "#{index}) #{music.publish_date} - #{music.on_spotify}"
+  end
+  selected_index = gets.chomp.to_i
+  print 'Label title: '
+  title = gets.chomp
+  print 'Label color: '
+  color = gets.chomp
+  label = Label.new(title, color)
+  music[selected_index].add_label(label)
+  labels << label
+  puts 'Label assigned successfully'
 end
 
 def show_books
