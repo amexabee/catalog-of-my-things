@@ -91,7 +91,7 @@ To run tests, run the following command:
 
 
 ```sh
-  rubocop
+  rspec
 ```
 
 
