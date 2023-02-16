@@ -13,3 +13,9 @@ CREATE TABLE music_album (
   FOREIGN KEY (label) REFERENCES label(id),
   FOREIGN KEY (genre) REFERENCES genre(id)
 );
+
+-- CREATE GENRE TABLE
+CREATE TABLE genre (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+);
