@@ -69,38 +69,31 @@ To get a local copy up and running, follow these steps.
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
-
 ```sh
   cd my-folder
   git clone git@github.com:mperezbazan/catalog-of-my-things.git
 ```
---->
+
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
-Example command:
 
 ```sh
   ruby src/main.rb
 ```
---->
+
 
 ### Run tests
 
 To run tests, run the following command:
 
-<!--
-Example command:
 
 ```sh
   rubocop
 ```
---->
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
