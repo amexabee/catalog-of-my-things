@@ -3,7 +3,7 @@ require_relative '../src/item'
 
 describe Genre do
   before :each do
-    @genre = Genre.new('Comic', '2023-02-13')
+    @genre = Genre.new('Comic')
     @item = Item.new '2023-02-13'
   end
   describe 'Testing for Genre class' do
