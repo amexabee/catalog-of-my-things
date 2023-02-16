@@ -10,6 +10,8 @@ require_relative './functions/add_music_album'
 require_relative './functions/list_music_albums'
 require_relative './functions/list_genres'
 require_relative './functions/assign_author'
+require_relative './functions/save_data'
+require_relative './functions/load_data'
 
 class App
   attr_reader :books, :authors, :games, :items, :labels, :genres, :music, :music_genre_fl
@@ -45,5 +47,14 @@ class App
 
   def options(option)
     send(LIST_OPTIONS[option])
+  end
+
+  def save_data
+    save_books
+    save_labels
+  end
+
+  def load
+    load_data
   end
 end
