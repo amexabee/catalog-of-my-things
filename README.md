@@ -1,4 +1,9 @@
+<img src="https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white" alt="ruby" height="auto" />
 <a name="readme-top"></a>
+
+<div align="center">
+  <h1><b>Catalog of My Things</b></h1>
+</div>
 
 <!-- TABLE OF CONTENTS -->
 
