@@ -50,7 +50,9 @@ class App
 
   def save_data
     save_books
+    save_games
     save_labels
+    save_authors
   end
 
   def load
