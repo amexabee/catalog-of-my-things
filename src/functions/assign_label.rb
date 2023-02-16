@@ -3,7 +3,7 @@ require_relative './show_books_items'
 require_relative './show_games_items'
 require_relative './show_music_items'
 
-ITEMS_TYPE = %w[BOOK MUSIC GAME MOVIE].freeze
+ITEMS_TYPE = %w[BOOK MUSIC GAME].freeze
 def assign_label
   loop do
     puts 'Select the type of item that you want to add label:'
@@ -16,12 +16,11 @@ def assign_label
 
     case item_type
     when 1
-      selected_index = show_books_items
-      assign(books[selected_index])
+      assign(books[show_books_items])
     when 2
-      show_music_items
+      assign(music[show_music_items])
     when 3
-      show_games_items
+      assign(games[show_games_items])
     else
       puts 'Select a correct type'
     end

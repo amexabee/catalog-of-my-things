@@ -19,19 +19,16 @@ class App
   LIST_OPTIONS = {
     1 => :list_books,
     2 => :list_music_albums,
-    3 => :list_movies,
-    4 => :list_games,
-    5 => :list_genres,
-    6 => :list_labels,
-    7 => :list_authors,
-    8 => :list_sources,
-    9 => :add_book,
-    10 => :add_music_album,
-    11 => :add_movie,
-    12 => :add_game,
-    13 => :assign_label,
-    14 => :assign_author,
-    15 => :assign_genre
+    3 => :list_games,
+    4 => :list_genres,
+    5 => :list_labels,
+    6 => :list_authors,
+    7 => :add_book,
+    8 => :add_music_album,
+    9 => :add_game,
+    10 => :assign_label,
+    11 => :assign_author,
+    12 => :assign_genre
   }.freeze
 
   def initialize

@@ -1,8 +1,8 @@
 require 'json'
 
-GENRE_FILE = 'genres.json'.freeze
-MUSIC_FILE = 'music_albums.json'.freeze
-MUSIC_GENRE_FILE = 'music_albums_genres.json'.freeze
+GENRE_FILE = './data/genres.json'.freeze
+MUSIC_FILE = './data/music_albums.json'.freeze
+MUSIC_GENRE_FILE = './data/music_albums_genres.json'.freeze
 
 def write_json(array, file_path)
   opts = {
