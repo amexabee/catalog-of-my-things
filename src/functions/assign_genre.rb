@@ -1,8 +1,6 @@
 require_relative '../genre'
 require_relative 'inputs'
 
-ITEMS_TYPE = %w[BOOK MUSIC GAME MOVIE].freeze
-
 def assign_genre
   loop do
     puts 'Select the type of item that you want to add genre:'

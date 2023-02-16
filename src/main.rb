@@ -5,10 +5,12 @@ def main
   app = App.new
   on_entry(app)
   puts 'Welcome to My Catalog of Things'
+  app.load
   loop do
     show_menu
     input = gets.chomp.to_i
     if input.zero?
+      app.save_data
       puts "\nGood Bye."
       on_exit(app)
       break
