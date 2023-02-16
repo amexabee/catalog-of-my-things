@@ -3,7 +3,6 @@ CREATE TABLE music_album (
   id SERIAL PRIMARY KEY,
   author INTEGER,
   genre INTEGER,
-  source INTEGER,
   label INTEGER,
   publish_date DATE NOT NULL,
   archived BOOLEAN,
