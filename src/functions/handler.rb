@@ -73,11 +73,17 @@ end
 def read_music_genre(app)
   array = read_json(MUSIC_GENRE_FILE)
   array.each do |mg|
-    app.music_genre_fl.push(music_id: mg['music_id'], genre_id: mg['genre_id'])
+    if mg['type'] == 'Music'
+      app.music_genre_fl.push(music_id: mg['music_id'], genre_id: mg['genre_id'], type: mg['type'])
+    elsif mg['type'] == 'Book'
+      app.music_genre_fl.push(Book_id: mg['book_id'], genre_id: mg['genre_id'], type: mg['type'])
+    else
+      app.music_genre_fl.push(Game_id: mg['game_id'], genre_id: mg['genre_id'], type: mg['type'])
+    end
   end
 end
 
-# Read MUSIC_GENRES
+# SAVE MUSIC_GENRES
 def save_music_genre(app)
   array = []
   app.music_genre_fl.each do |mg|

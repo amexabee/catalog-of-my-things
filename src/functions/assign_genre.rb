@@ -32,7 +32,7 @@ def show_music_genre
   genre = Genre.new(input)
   music[selected_index].add_genre(genre)
   genres << genre
-  music_genre_fl.push(music_id: selected_index, genre_id: genres.length - 1)
+  music_genre_fl.push(music_id: selected_index, genre_id: genres.length - 1, type: 'Music')
   puts 'Genre assigned successfully'
 end
 
@@ -51,7 +51,7 @@ def show_books_genre
   genre = Genre.new(input)
   books[selected_index].add_genre(genre)
   genres << genre
-  music_genre_fl.push(music_id: selected_index, genre_id: genres.length - 1)
+  music_genre_fl.push(book_id: selected_index, genre_id: genres.length - 1, type: 'Book')
   puts 'Genre assigned successfully'
 end
 
@@ -70,6 +70,6 @@ def show_games_genre
   genre = Genre.new(input)
   games[selected_index].add_genre(genre)
   genres << genre
-  music_genre_fl.push(music_id: selected_index, genre_id: genres.length - 1)
+  music_genre_fl.push(game_id: selected_index, genre_id: genres.length - 1, type: 'Game')
   puts 'Genre assigned successfully'
 end
