@@ -4,7 +4,7 @@ CREATE TABLE music_album (
   author INTEGER,
   genre INTEGER,
   source INTEGER,
-  label INTEGERL,
+  label INTEGER,
   publish_date DATE NOT NULL,
   archived BOOLEAN,
   on_spotify BOOLEAN,
@@ -17,13 +17,13 @@ CREATE TABLE music_album (
 -- CREATE GENRE TABLE
 CREATE TABLE genre (
   id SERIAL PRIMARY KEY,
-  name VARCHAR(100) NOT NULL,
+  name VARCHAR(100) NOT NULL
 );
 
 -- CREATE GENRE ITEMS TABLE
 CREATE TABLE genre_items (
   id SERIAL PRIMARY KEY,
-  genre_id INTEGER NOT NULL
+  genre_id INTEGER NOT NULL,
   item VARCHAR(100) NOT NULL,
   FOREIGN KEY(genre_id) REFERENCES genre(id)
 );
