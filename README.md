@@ -26,9 +26,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Catalog of my things] <a name="about-project"></a>
+# 📖 Catalog of my things <a name="about-project"></a>
 
-**[Catalog of my things]** is a console app that will help you to keep a record of different types of things you own: books, music albums, movies, and games.
+**Catalog of my things** is a console app that will help you to keep a record of different types of things you own: books, music albums, movies, and games.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -46,9 +46,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[You can manage Books]**
-- **[You can manage Music]**
-- **[You can manage Games]**
+- **You can manage Books**
+- **You can manage Music**
+- **You can manage Games**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -81,7 +81,7 @@ To run the project, execute the following command:
 Example command:
 
 ```sh
-  ruby main.rb
+  ruby src/main.rb
 ```
 --->
 
@@ -129,9 +129,9 @@ Example command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Add music]**
-- [ ] **[Remove items]**
-- [ ] **[Add genre to book]**
+- [ ] **Add music**
+- [ ] **Remove items**
+- [ ] **Add genre to book**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
