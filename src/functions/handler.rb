@@ -73,9 +73,10 @@ end
 def read_music_genre(app)
   array = read_json(MUSIC_GENRE_FILE)
   array.each do |mg|
-    if mg['type'] == 'Music'
+    case mg['type']
+    when 'Music'
       app.music_genre_fl.push(music_id: mg['music_id'], genre_id: mg['genre_id'], type: mg['type'])
-    elsif mg['type'] == 'Book'
+    when 'Book'
       app.music_genre_fl.push(Book_id: mg['book_id'], genre_id: mg['genre_id'], type: mg['type'])
     else
       app.music_genre_fl.push(Game_id: mg['game_id'], genre_id: mg['genre_id'], type: mg['type'])
