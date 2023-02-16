@@ -12,7 +12,7 @@ require_relative './functions/list_genres'
 require_relative './functions/assign_author'
 
 class App
-  attr_reader :books, :authors, :games, :items, :labels, :genres, :music
+  attr_reader :books, :authors, :games, :items, :labels, :genres, :music, :music_genre_fl
 
   LIST_OPTIONS = {
     1 => :list_books,
@@ -40,6 +40,7 @@ class App
     @labels = []
     @music = []
     @genres = []
+    @music_genre_fl = []
   end
 
   def options(option)
