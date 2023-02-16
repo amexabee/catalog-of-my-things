@@ -1,8 +1,10 @@
 require_relative './app'
+require_relative './functions/handler'
 
 def main
-  puts 'Welcome to My Catalog of Things'
   app = App.new
+  on_entry(app)
+  puts 'Welcome to My Catalog of Things'
   app.load
   loop do
     show_menu
@@ -10,6 +12,7 @@ def main
     if input.zero?
       app.save_data
       puts "\nGood Bye."
+      on_exit(app)
       break
     end
     app.options(input)

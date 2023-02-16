@@ -24,7 +24,7 @@ def show_music_genre
   end
   puts 'Select the music to assign genre by index number'
   music.each_with_index do |music, index|
-    puts "#{index}) #{music.publish_date} - #{music.on_spotify}"
+    puts "#{index}) Release-Date: #{music.publish_date}, On-Spotify: #{music.on_spotify}"
   end
   selected_index = gets.chomp.to_i
   print 'Genre name: '
@@ -32,6 +32,7 @@ def show_music_genre
   genre = Genre.new(input)
   music[selected_index].add_genre(genre)
   genres << genre
+  music_genre_fl.push(music_id: selected_index, genre_id: genres.length - 1, type: 'Music')
   puts 'Genre assigned successfully'
 end
 
@@ -50,6 +51,7 @@ def show_books_genre
   genre = Genre.new(input)
   books[selected_index].add_genre(genre)
   genres << genre
+  music_genre_fl.push(book_id: selected_index, genre_id: genres.length - 1, type: 'Book')
   puts 'Genre assigned successfully'
 end
 
@@ -68,5 +70,6 @@ def show_games_genre
   genre = Genre.new(input)
   games[selected_index].add_genre(genre)
   genres << genre
+  music_genre_fl.push(game_id: selected_index, genre_id: genres.length - 1, type: 'Game')
   puts 'Genre assigned successfully'
 end
