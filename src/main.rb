@@ -3,10 +3,12 @@ require_relative './app'
 def main
   puts 'Welcome to My Catalog of Things'
   app = App.new
+  app.load
   loop do
     show_menu
     input = gets.chomp.to_i
     if input.zero?
+      app.save_data
       puts "\nGood Bye."
       break
     end
