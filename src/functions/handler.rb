@@ -1,6 +1,5 @@
 require 'json'
 
-
 GENRE_FILE = 'genres.json'.freeze
 MUSIC_FILE = 'music_albums.json'.freeze
 MUSIC_GENRE_FILE = 'music_albums_genres.json'.freeze
