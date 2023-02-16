@@ -8,7 +8,6 @@ CREATE TABLE music_album (
   archived BOOLEAN,
   on_spotify BOOLEAN,
   FOREIGN KEY (author) REFERENCES author(id),
-  FOREIGN KEY (source) REFERENCES source(id),
   FOREIGN KEY (label) REFERENCES label(id),
   FOREIGN KEY (genre) REFERENCES genre(id)
 );
